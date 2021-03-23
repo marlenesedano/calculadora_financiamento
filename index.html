@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Financiamento</title>
+  </head>
+  <header>
+    <h1>Cálculo de Juros de Financiamento</h1>
+  </header>
+  <body>
+    <main>
+      <section class="container">
+        <label class="info-label" for="juros">Cálculo de Financiamento</label>
+        <div>
+          <span class="input-label">Valor Financiado</span>
+          <div class="input-group">
+            <span>R$</span>
+            <input type="number" />
+          </div>
+        </div>
+        <div>
+          <span class="input-label">Juros</span>
+          <div class="input-group">
+            <input class="time-course" type="number" />
+            <select name="fees" id="fees">
+              <option value="anual">% Anual</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <span class="input-label">Periodo em</span>
+          <div class="input-group">
+            <input class="time-course" type="number" />
+            <select name="fees" id="fees">
+              <option value="mensal">Meses</option>
+              <option value="anual">Anos</option>
+            </select>
+          </div>
+        </div>
+        <div class="button-group">
+          <button>Calcular</button>
+          <button>Limpar</button>
+          <button>Imprimir</button>
+        </div>
+      </section>
+      <section class="data-financing">
+        <div>
+          <h2>Resumo do total dos pagamentos:</h2>
+        </div>
+        <div>
+          <span>Pagamento Mensal estimado:</span>
+          <i class="teste">0.00</i>
+        </div>
+        <div>
+          <span>Valor Total do Imprestimo:</span>
+        </div>
+        <div>
+          <span>Juros acumulados:</span>
+        </div>
+        <div>
+          <span>Total de pagementos de taxas e seguros:</span>
+        </div>
+        <div>
+          <span>Total de Todos os Pagementos:</span>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="/app.js"></script>
+</html>

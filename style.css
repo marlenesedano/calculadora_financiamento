@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    background-color: blue;
+    color: #FFFFFF;
+    font-family: Noto Sans;
+    height: 10rem;
+    width: 100%;
+}
+
+body{
+    background-color: #F9F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.info-label{
+    text-align: center;
+    font-size: 1.6em;
+    font-family: Maven Pro;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #1e60bb;
+    margin-bottom: 2rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    background-color: #fff;
+    
+    padding: 60px 80px;
+    min-width: 300px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 20%);
+}
+
+.input-label{
+    
+    font-family: Noto Sans;
+    font-size: .9em;
+    font-weight: 500;
+    color: rgba(110, 107, 107, 0.89);
+}
+.input-group{
+    display: flex;
+    margin-top: .1rem;
+    height: 2rem;
+    border-radius: 6px;
+    height: 46px;
+   
+}
+
+.input-group span {
+    background-color: #1E60BB;
+    color: #ffff;
+    padding: 12px 10px 0 14px;
+    align-items: center;
+    transition: all .25s;
+    font-size: 1em;
+    font-family: Noto Sans;
+    width: 2rem;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+input{
+    background-color: #EEEEEE;
+    font-family: Noto Sans;
+    box-shadow: none;
+    border-color: #EEEEEE;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 20rem;
+    padding: 6px;
+    font-size: 1em;
+}
+
+#fees{
+    background-color: #1E60BB;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    transition: all .25s;
+    font-size: 1em;
+    font-family: Noto Sans;
+    font-weight: bold;
+    width: 6rem;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+.time-course{
+    
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 17.5rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.button-group button{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: #1E60BB ;
+    color: #FFFFFF;
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: .9em;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    transition: .3s;
+    align-items: center;
+    outline: none;
+    border: none;
+
+}
+
+.button-group button:hover{
+    cursor: pointer;
+    transition: .4s;
+    background-color: #FFFFFF;
+    color: black;
+    border: 1px solid black ;
+}
+
+
+
+.data-financing div{
+    width: 100%;
+    font-family: Noto Sans;
+    margin: 0;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: start;
+    
+}
+
+
+.data-financing {
+    margin-top: 3rem;
+    width: 60%;
+    
+}
