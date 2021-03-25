@@ -3,17 +3,16 @@
     padding: 0;
 }
 
-
 header{
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     background-color: blue;
     color: #FFFFFF;
     font-family: Noto Sans;
-    height: 10rem;
+    height: 5rem;
     width: 100%;
 }
 
@@ -23,7 +22,6 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
 
 .info-label{
     text-align: center;
@@ -105,9 +103,7 @@ input{
     border-bottom-right-radius: 6px;
 }
 
-
 .time-course{
-    
     border-bottom-left-radius: 6px;
     border-top-left-radius: 6px;
     width: 17.5rem;
@@ -116,7 +112,6 @@ input{
 input:focus{
     outline: none;
 }
-
 
 .button-group button{
     margin-top: 3rem;
@@ -133,7 +128,6 @@ input:focus{
     align-items: center;
     outline: none;
     border: 1px solid transparent;
-
 }
 
 .button-group button:hover{
@@ -144,21 +138,140 @@ input:focus{
     border: 1px solid black ;
 }
 
-
-
-.data-financing div{
+.data-financing table{
     width: 100%;
     font-family: Noto Sans;
     margin: 0;
-    line-height: 30px;
     font-size: 14px;
-    border-bottom: 1px solid #dadada;
-    display: flex;
-    justify-content: start;
-    
+    margin-top: 3rem;
 }
+
+th{
+    text-align: center;
+    font-size: 1.6em;
+    font-family: Maven Pro;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #1e60bb;
+    margin-bottom: 4rem;
+}
+
+td {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    font-size: 16px;
+    padding: 8px;
+    font-family: Noto Sans;
+  }
+
 
 
 .data-financing {
     margin-top: 3rem;
+}
+
+.result{
+    font-weight: bold;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    margin-top: 4rem;
+    color: #FFFFFF;
+    bottom:0;
+    left:0;
+    font-family: Maven Pro;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+    height: 3rem;
+    background-color: #1E60BB ;
+    width: 100%;
+    /* position: fixed; */
+}
+
+footer a {
+    color: white;
+    
+}
+
+/* responsividade */
+
+@media (max-width: 800px){
+    body{
+      
+        background: #fff;
+    }
+
+    .container{
+        
+        border: none;
+        box-shadow: none;
+        
+        padding: 20px 20px;
+        margin: 1rem;
+       
+    }
+     
+    header{
+      
+        display: none;
+    }
+
+    
+
+    .data-financing table{
+        width: 100%;
+        font-family: Noto Sans;
+        margin: 0;
+        padding: 2rem;
+        font-size: 12px;
+        margin: 3px ;
+
+    }
+
+     td {
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        font-size: 14px;
+        padding: auto;
+        font-family: Noto Sans;
+        margin-right: 200px;
+        
+    }
+
+    table{
+        padding: 20% 10%;
+    }
+
+
+
+    .data-financing {
+        margin-top: 3rem;
+    }
+
+
+
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 2rem; */
+        color: #FFFFFF;
+        bottom:0;
+        left:0;
+        font-family: Maven Pro;
+        font-size: 16px;
+        text-align: center;
+        align-items: center;
+        height: 2rem;
+        background-color: #1E60BB ;
+        width: 100%;
+        position: fixed;
+    }
 }

@@ -18,66 +18,78 @@
     <title>Financiamento</title>
   </head>
   <header>
-    <h1>Cálculo de Juros de Financiamento</h1>
+    <h1>Calculadora de Financiamento</h1>
   </header>
   <body>
     <main>
       <section class="container">
-        <label class="info-label" for="juros">Cálculo de Financiamento</label>
+        <label class="info-label" for="juros">Calcular Financiamento</label>
         <div>
           <span class="input-label">Valor Financiado</span>
           <div class="input-group">
             <span>R$</span>
-            <input type="number" />
+            <input id="value" type="number" />
           </div>
         </div>
         <div>
+          <!-- JUROS -->
           <span class="input-label">Juros</span>
           <div class="input-group">
-            <input class="time-course" type="number" />
+            <input id="fees-financing" class="time-course" type="number" />
             <select name="fees" id="fees">
+              <option value="mes">% Mes</option>
               <option value="anual">% Anual</option>
             </select>
           </div>
         </div>
         <div>
+          <!-- TEMPO -->
           <span class="input-label">Periodo em</span>
           <div class="input-group">
-            <input class="time-course" type="number" />
-            <select name="fees" id="fees">
+            <input id="time-financing" class="time-course" type="number" />
+            <select name="time" id="fees">
               <option value="mensal">Meses</option>
               <option value="anual">Anos</option>
             </select>
           </div>
         </div>
         <div class="button-group">
-          <button>Calcular</button>
-          <button>Limpar</button>
-          <button>Imprimir</button>
+          <button id="calculate">CALCULAR</button>
+          <button id="clear">LIMPAR</button>
+          <button>IMPRIMIR</button>
         </div>
       </section>
       <section class="data-financing">
-        <div>
-          <h2>Resumo do total dos pagamentos:</h2>
-        </div>
-        <div>
-          <span>Pagamento Mensal estimado:</span>
-          <i class="teste">0.00</i>
-        </div>
-        <div>
-          <span>Valor Total do Imprestimo:</span>
-        </div>
-        <div>
-          <span>Juros acumulados:</span>
-        </div>
-        <div>
-          <span>Total de pagementos de taxas e seguros:</span>
-        </div>
-        <div>
-          <span>Total de Todos os Pagementos:</span>
-        </div>
+        <table>
+          <tr>
+            <th colspan="2">Resumo do total dos pagamentos</th>
+          </tr>
+          <tr>
+            <td>Pagamento mensal estimado:</td>
+            <td id="portion" class="result">R$0.00</td>
+          </tr>
+          <tr>
+            <td>Valor do imprestimo:</td>
+            <td id="total_lent" class="result">R$0.00</td>
+          </tr>
+          <tr>
+            <td>Juros acumulados:</td>
+            <td id="accumulated" class="result">R$0.00</td>
+          </tr>
+          <tr>
+            <td>Total pagamentos:</td>
+            <td id="payment" class="result">R$0.00</td>
+          </tr>
+        </table>
       </section>
     </main>
   </body>
+  <footer>
+    Desenvolvido por &nbsp;
+    <a target="_blank" href="https://github.com/marlenesedano"
+      >Marlene Sedano</a
+    >
+  </footer>
+
   <script src="/app.js"></script>
 </html>
