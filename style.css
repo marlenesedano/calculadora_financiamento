@@ -51,8 +51,10 @@ body{
     
     font-family: Noto Sans;
     font-size: .9em;
+   
     font-weight: 500;
     color: rgba(110, 107, 107, 0.89);
+    
 }
 .input-group{
     display: flex;
@@ -61,6 +63,9 @@ body{
     border-radius: 6px;
     height: 46px;
    
+}
+.input-wrapper{
+    margin-bottom: 9px;
 }
 
 .input-group span {
@@ -89,7 +94,7 @@ input{
     font-size: 1em;
 }
 
-#fees{
+#select_fees, #select_time{
     background-color: #1E60BB;
     color: #ffff;
     display: flex;
@@ -102,6 +107,8 @@ input{
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+
+
 
 .time-course{
     border-bottom-left-radius: 6px;
@@ -181,7 +188,7 @@ footer{
     align-items: center;
     justify-content: center;
     /* flex-direction: column; */
-    margin-top: 4rem;
+    margin-top: 2rem;
     color: #FFFFFF;
     bottom:0;
     left:0;

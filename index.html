@@ -23,22 +23,22 @@
   <body>
     <main>
       <section class="container">
-        <label class="info-label" for="juros">Calcular Financiamento</label>
-        <div>
-          <span class="input-label">Valor Financiado</span>
+        <label class="info-label" for="juros">Calcular Financiamento:</label>
+        <div class="input-wrapper">
+          <span class="input-label">Valor Financiado:</span>
           <div class="input-group">
             <span>R$</span>
             <input id="value" type="number" />
           </div>
         </div>
-        <div>
+        <div class="input-wrapper">
           <!-- JUROS -->
-          <span class="input-label">Juros</span>
+          <span class="input-label">Percentual de Juros ao:</span>
           <div class="input-group">
             <input id="fees-financing" class="time-course" type="number" />
-            <select name="fees" id="fees">
-              <option value="mes">% Mes</option>
-              <option value="anual">% Anual</option>
+            <select name="fees" id="select_fees">
+              <option id="select_month_fees" value="mes">Mes</option>
+              <option id="select_year_fees" value="ano">Ano</option>
             </select>
           </div>
         </div>
@@ -47,9 +47,9 @@
           <span class="input-label">Periodo em</span>
           <div class="input-group">
             <input id="time-financing" class="time-course" type="number" />
-            <select name="time" id="fees">
-              <option value="mensal">Meses</option>
-              <option value="anual">Anos</option>
+            <select name="time" id="select_time">
+              <option id="select_month_time" value="mensal">Mes</option>
+              <option id="select_year_time" value="anual">Anos</option>
             </select>
           </div>
         </div>
@@ -70,7 +70,7 @@
           </tr>
           <tr>
             <td>Valor do imprestimo:</td>
-            <td id="total_lent" class="result">R$0.00</td>
+            <td id="total_loan" class="result">R$0.00</td>
           </tr>
           <tr>
             <td>Juros acumulados:</td>
