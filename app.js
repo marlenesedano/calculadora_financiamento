@@ -32,7 +32,10 @@ function tipe_time(time) {
 }
 
 function portion(value, fees, time, cash) {
-  value = document.getElementById("value").value;
+  value = document
+    .getElementById("value")
+    .value.replace(".", "")
+    .replace(",", ".");
   time = tipe_time();
 
   fees = tipe_fees();
@@ -51,7 +54,9 @@ function portion(value, fees, time, cash) {
 }
 
 function loan() {
-  let value_lent = Number(document.getElementById("value").value);
+  let value_lent = Number(
+    document.getElementById("value").value.replace(".", "").replace(",", ".")
+  );
   let print;
 
   print = value_lent.toLocaleString("pt-br", {
@@ -62,7 +67,10 @@ function loan() {
 }
 
 function fees_acumulado(value, time) {
-  value = document.getElementById("value").value;
+  value = document
+    .getElementById("value")
+    .value.replace(".", "")
+    .replace(",", ".");
   time = tipe_time();
   let result = portion() * time;
   let result_final = result - value;
@@ -117,3 +125,24 @@ function data_clear() {
 document.getElementById("clear").addEventListener("click", () => {
   data_clear();
 });
+
+document.getElementById("printer").addEventListener("click", () => {
+  window.print();
+});
+
+function formatCurrency() {
+  let element = document.getElementById("value");
+  let value = element.value;
+
+  value = value + "";
+  value = parseInt(value.replace(/[\D]+/g, ""));
+  value = value + "";
+  value = value.replace(/([0-9]{2})$/g, ",$1");
+
+  if (value.length > 6) {
+    value = value.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+  }
+
+  element.value = value;
+  if (value == "NaN") element.value = "";
+}

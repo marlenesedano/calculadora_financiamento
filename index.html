@@ -15,6 +15,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
+
     <title>Financiamento</title>
   </head>
   <header>
@@ -28,7 +30,12 @@
           <span class="input-label">Valor Financiado:</span>
           <div class="input-group">
             <span>R$</span>
-            <input id="value" type="number" />
+            <input
+              id="value"
+              maxlength="9"
+              type="text"
+              onkeyup="formatCurrency()"
+            />
           </div>
         </div>
         <div class="input-wrapper">
@@ -56,7 +63,7 @@
         <div class="button-group">
           <button id="calculate">CALCULAR</button>
           <button id="clear">LIMPAR</button>
-          <button>IMPRIMIR</button>
+          <button id="printer">IMPRIMIR</button>
         </div>
       </section>
       <section class="data-financing">
