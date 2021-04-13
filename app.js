@@ -14,8 +14,8 @@ function getFinancingData() {
     interest,
     time,
     selectInterest,
-    selectTime
-  }
+    selectTime,
+  };
 }
 
 function typeFinancingInterest({ interest, selectInterest }) {
@@ -62,6 +62,7 @@ function loan() {
     style: "currency",
     currency: "BRL",
   });
+
   print = document.getElementById("total_loan").innerHTML = print;
 }
 
@@ -74,10 +75,12 @@ function accumulated_interest() {
   let result = portion(getFinancingData()) * time;
   let result_final = result - value;
   let print;
+
   print = result_final.toLocaleString("pt-br", {
     style: "currency",
     currency: "BRL",
   });
+
   print = document.getElementById("accumulated").innerHTML = print;
 }
 
@@ -86,10 +89,12 @@ function payment_total(portion_value) {
   time = typeFinancingTime(getFinancingData());
   let result = time * portion_value;
   let print;
+
   print = result.toLocaleString("pt-br", {
     style: "currency",
     currency: "BRL",
   });
+
   print = document.getElementById("payment").innerHTML = print;
 }
 
@@ -100,24 +105,8 @@ document.getElementById("calculate").addEventListener("click", () => {
   payment_total(portion_value);
 });
 
-function data_clear() {
-  value = document.getElementById("value").value;
-  time = typeFinancingTime(getFinancingData());
-  fees = typeFinancingInterest(getFinancingData());
-  value = "";
-  time = "";
-  fees = "";
-  document.getElementById("value").value = value;
-  document.getElementById("time-financing").value = time;
-  document.getElementById("fees-financing").value = fees;
-  document.getElementById("payment").innerHTML = "R$ 0,00";
-  print = document.getElementById("accumulated").innerHTML = "R$ 0,00";
-  print = document.getElementById("total_loan").innerHTML = "R$ 0,00";
-  cash = document.getElementById("portion").innerHTML = "R$ 0,00";
-}
-
 document.getElementById("clear").addEventListener("click", () => {
-  data_clear();
+  location.reload();
 });
 
 document.getElementById("printer").addEventListener("click", () => {
