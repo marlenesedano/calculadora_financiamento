@@ -195,6 +195,7 @@ footer{
     height: 3rem;
     background-color: #1E60BB ;
     width: 100%;
+    position: fixed;
    
 }
 
