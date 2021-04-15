@@ -31,7 +31,11 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     color: #1e60bb;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.master{
+    margin: 1rem;
 }
 
 .container{
@@ -40,11 +44,10 @@ body{
     align-items: center;
     background: #fff;
     background-color: #fff;
-    padding: 60px 80px;
-    min-width: 300px;
     position: relative;
     border-radius: 15px;
     box-shadow: 0 0 30px rgb(0 0 0 / 20%);
+    padding: 1rem 2rem;
 }
 
 .input-label{
@@ -108,8 +111,6 @@ input{
     border-bottom-right-radius: 6px;
 }
 
-
-
 .time-course{
     border-bottom-left-radius: 6px;
     border-top-left-radius: 6px;
@@ -121,7 +122,7 @@ input:focus{
 }
 
 .button-group button{
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     background-color: #1E60BB ;
     color: #FFFFFF;
@@ -150,7 +151,6 @@ input:focus{
     font-family: Noto Sans;
     margin: 0;
     font-size: 14px;
-    margin-top: 3rem;
 }
 
 th{
@@ -161,7 +161,7 @@ th{
     padding-left: 10px;
     padding-right: 10px;
     color: #1e60bb;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 td {
@@ -170,24 +170,20 @@ td {
     font-size: 16px;
     padding: 8px;
     font-family: Noto Sans;
-  }
-
-
+}
 
 .data-financing {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .result{
     font-weight: bold;
 }
 
-
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
     margin-top: 2rem;
     color: #FFFFFF;
     bottom:0;
@@ -199,86 +195,201 @@ footer{
     height: 3rem;
     background-color: #1E60BB ;
     width: 100%;
-    /* position: fixed; */
+   
 }
 
 footer a {
     color: white;
-    
 }
 
 /* responsividade */
 
-@media (max-width: 800px){
-    body{
-      
-        background: #fff;
+@media (max-width: 575px){
+    main{
+        display: block;
+        align-items: center;
     }
-
-    .container{
-        
-        border: none;
-        box-shadow: none;
-        
-        padding: 20px 20px;
-        margin: 1rem;
-       
-    }
-     
     header{
-      
         display: none;
     }
-
-    
-
     .data-financing table{
         width: 100%;
         font-family: Noto Sans;
         margin: 0;
-        padding: 2rem;
+        padding: 1rem;
         font-size: 12px;
         margin: 3px ;
-
+    }
+    .container{
+        border: none;
+        box-shadow: none;
+    }
+    body{
+        background-color:  #FFFFFF;
     }
 
-     td {
-        border-bottom: 1px solid #dddddd;
-        text-align: left;
-        font-size: 14px;
-        padding: auto;
-        font-family: Noto Sans;
-        margin-right: 200px;
-        
+    .button-group button{
+        margin-top: 2rem;
+        margin-bottom: -1rem;
     }
-
-    table{
-        padding: 20% 10%;
-    }
-
-
-
-    .data-financing {
-        margin-top: 3rem;
-    }
-
-
 
     footer{
-        display: flex;
+        position: fixed;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        box-shadow: none;
+        border: none;
+    }
+    .data-financing table{
+        width: 100%;
+        padding: 2rem;
+        margin: 3px ;
+    }
+}
+
+@media(max-width:423px){
+    main{
+       max-width: 400px;
+    }
+    .container{
+        display: block;
         align-items: center;
         justify-content: center;
-        /* margin-top: 2rem; */
-        color: #FFFFFF;
-        bottom:0;
-        left:0;
-        font-family: Maven Pro;
-        font-size: 16px;
+        margin: 1px;
+    }
+    .button-group button{
+        font-size: 11px;
+    }
+    .info-label{
         text-align: center;
+        display: flex;
+        justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 396px){
+    main{
+        max-width: 396px; 
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 0;
+    }
+    input{
+        width: 15rem;
+    }
+    .time-course{
+        width: 12rem;
+    }
+    .button-group button{
+        display: inline-grid;
+    }
+    footer{
+        text-align: center;
         height: 2rem;
-        background-color: #1E60BB ;
-        width: 100%;
-        position: fixed;
+        align-items: center;
+        display: flex;
+    }
+}
+
+@media (max-width: 345px){
+
+    .container{
+        margin: 1%;
+        padding: 2%;
+        max-width: 345px;
+    }
+
+    .button-group{
+        display: flex;
+    }
+    input{
+        width: 15rem;
+    }
+    .time-course{
+        width: 12rem;
+    }
+    footer{
+        font-size: 1rem;
+        height: 2rem;
+    }
+    table{
+        padding: 1px;
+    }
+}
+
+@media (max-width: 325px){
+    main{
+        max-width: 325px; 
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 0;
+    }
+    input{
+        width: 15rem;
+    }
+    .button-group button{
+        display: inline-grid;
+        text-align: center;
+        border: none;
+    }
+    .time-course{
+        width: 12rem;
+    }
+    footer{
+        text-align: center;
+    }
+}
+
+@media (max-width:310px){
+    main{
+        max-width: 310px; 
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 0;
+    }
+    input{
+        width: 12rem;
+    }
+    .time-course{
+        width: 9rem;
+    }
+}
+
+@media (max-width:261px){
+    main{
+        max-width: 261px; 
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 0;
+    }
+    input{
+        width: 9rem;
+    }
+    .time-course{
+        width: 7rem;
     }
 }

@@ -24,48 +24,51 @@
   </header>
   <body>
     <main>
-      <section class="container">
-        <label class="info-label" for="juros">Calcular Financiamento:</label>
-        <div class="input-wrapper">
-          <span class="input-label">Valor Financiado:</span>
-          <div class="input-group">
-            <span>R$</span>
-            <input
-              id="value"
-              maxlength="9"
-              type="text"
-              onkeyup="formatCurrency()"
-            />
+      <div class="master">
+        <section class="container">
+          <label class="info-label" for="juros">Calcular Financiamento:</label>
+          <div class="input-wrapper">
+            <span class="input-label">Valor Financiado:</span>
+            <div class="input-group">
+              <span>R$</span>
+              <input
+                id="value"
+                maxlength="9"
+                type="text"
+                onkeyup="formatCurrency()"
+              />
+            </div>
           </div>
-        </div>
-        <div class="input-wrapper">
-          <!-- JUROS -->
-          <span class="input-label">Percentual de Juros ao:</span>
-          <div class="input-group">
-            <input id="fees-financing" class="time-course" type="number" />
-            <select name="fees" id="select_fees">
-              <option id="select_month_fees" value="mes">Mes</option>
-              <option id="select_year_fees" value="ano">Ano</option>
-            </select>
+          <div class="input-wrapper">
+            <!-- JUROS -->
+            <span class="input-label">Percentual de Juros ao:</span>
+            <div class="input-group">
+              <input id="fees-financing" class="time-course" type="number" />
+              <select name="fees" id="select_fees">
+                <option id="select_month_fees" value="mes">Mes</option>
+                <option id="select_year_fees" value="ano">Ano</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div>
-          <!-- TEMPO -->
-          <span class="input-label">Periodo em</span>
-          <div class="input-group">
-            <input id="time-financing" class="time-course" type="number" />
-            <select name="time" id="select_time">
-              <option id="select_month_time" value="mensal">Mes</option>
-              <option id="select_year_time" value="anual">Anos</option>
-            </select>
+          <div>
+            <!-- TEMPO -->
+            <span class="input-label">Periodo em</span>
+            <div class="input-group">
+              <input id="time-financing" class="time-course" type="number" />
+              <select name="time" id="select_time">
+                <option id="select_month_time" value="mensal">Mes</option>
+                <option id="select_year_time" value="anual">Anos</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="button-group">
-          <button id="calculate">CALCULAR</button>
-          <button id="clear">LIMPAR</button>
-          <button id="printer">IMPRIMIR</button>
-        </div>
-      </section>
+          <div class="button-group">
+            <button id="calculate">CALCULAR</button>
+            <button id="clear">LIMPAR</button>
+            <button id="printer">IMPRIMIR</button>
+          </div>
+        </section>
+      </div>
+
       <section class="data-financing">
         <table>
           <tr>
