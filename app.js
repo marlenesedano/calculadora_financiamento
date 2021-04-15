@@ -98,7 +98,15 @@ function payment_total(portion_value) {
   print = document.getElementById("payment").innerHTML = print;
 }
 
+function checks() {
+  value = document.getElementById("value").value;
+  if (value == "") {
+    alert("Informe o Valor do Financiamento!");
+  }
+}
+
 document.getElementById("calculate").addEventListener("click", () => {
+  checks();
   let portion_value = portion(getFinancingData());
   loan();
   accumulated_interest();
